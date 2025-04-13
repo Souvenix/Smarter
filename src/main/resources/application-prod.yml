@@ -1,0 +1,43 @@
+server:
+  port: 1234
+
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/tdy?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+  mail:
+    host: smtp.qq.com
+    username: hk-liu@qq.com
+    password: dqxndhhwtcbhdidj
+logging:
+  file:
+    name: ./logs/tdy.log
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+#jwt: data :这个路径是根据JWTUtil中的
+#@ConfigurationProperties("jwt.data")配置的
+jwt:
+  data:
+    #    jwt加密密钥
+    SECRET: jwt-token-secret
+    #    jwt储存的请求头Authorization固定写法
+    tokenHeader: Authorization
+    #      jwt的过期时间(60s*60min*24h*7day)
+    expiration: 604800
+qiniu:
+  access-key: lBDalXr5WHT8jKNqL3urCjQlDUmLsI7cVsxM4tYG
+  secret-key: ZnC8jWlImLEBIiyG-_AiJSkIPfLiknuUnijLDDOb
+  bucket-name: project-tdy2
+tdy:
+  feed-strategy: push
+  limit-strategy: slid
+coze:
+  secret-key: pat_CqCd4aDtjP5b6YGYB3B9QuGl5Ay2ThVNNQGh9IM2jISYb3IJ19SMAs49lvDJTsAI
+  avatar-bot-id: 7385785814309634102
+  reply-bot-id: 7386228482893725696
