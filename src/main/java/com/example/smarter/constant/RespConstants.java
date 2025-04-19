@@ -9,4 +9,5 @@ public class RespConstants {
     public static final String SUCCESS_MSG = "请求成功";
     public static final int FAIL = 400;
 
+    public static final String PARMA_ERROR_MSG = "参数错误";
 }

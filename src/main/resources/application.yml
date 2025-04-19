@@ -17,9 +17,14 @@ spring:
 logging:
   file:
     name: ${logging.file.name}
-mybatis:
+mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.smarter.entity
+  global-config:
+    db-config:
+      table-prefix: t_
 
 #jwt: data :这个路径是根据JWTUtil中的
 #@ConfigurationProperties("jwt.data")配置的

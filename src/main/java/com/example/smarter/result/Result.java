@@ -37,6 +37,10 @@ public class Result<T> implements Serializable {
         return new Result<>(code, message, null);
     }
 
+    public static <T> Result<T> failure(int code, String message, T data) {
+        return new Result<>(code, message, data);
+    }
+
     @Override
     public String toString() {
         return "Result{" +
