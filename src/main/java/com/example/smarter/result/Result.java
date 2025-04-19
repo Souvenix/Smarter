@@ -4,6 +4,7 @@ package com.example.smarter.result;
  * @author Souvenix
  * @time 2025/4/13
  */
+import com.example.smarter.constant.RespConstants;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -28,7 +29,7 @@ public class Result<T> implements Serializable {
 
     // 静态方法快速创建成功结果
     public static <T> Result<T> success(T data) {
-        return new Result<>(200, "Success", data);
+        return new Result<>(RespConstants.SUCCESS, RespConstants.SUCCESS_MSG, data);
     }
 
     // 静态方法快速创建失败结果

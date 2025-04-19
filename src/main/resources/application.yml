@@ -6,13 +6,14 @@ spring:
     url:  ${spring.datasource.url}
     username: ${spring.datasource.username}
     driver-class-name: ${spring.datasource.driver-class-name}
-  redis:
-    host: ${spring.redis.host}
-    port: ${spring.redis.port}
   mail:
     host: ${spring.mail.host}
     username: ${spring.mail.username}
     password: ${spring.mail.password}
+  data:
+    redis:
+      host: ${spring.redis.host}
+      port: ${spring.redis.port}
 logging:
   file:
     name: ${logging.file.name}
