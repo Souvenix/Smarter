@@ -22,6 +22,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    /**
+     * 根据条件查询符合条件的用户
+     * @param queryUserDTO
+     * @return
+     */
     @PostMapping("/queryByCondition")
     public Result<List<UserVO>> queryUserByCondition(@Valid @RequestBody QueryUserDTO queryUserDTO) {
         return Result.success(userService.queryUserByCondition(queryUserDTO));
